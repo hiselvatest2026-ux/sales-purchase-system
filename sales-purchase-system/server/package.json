@@ -1,16 +1,14 @@
 {
-  "name": "sales-purchase-server",
+  "name": "sales-purchase-system-server",
   "version": "1.0.0",
-  "type": "module",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "dev": "node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "better-sqlite3": "^9.6.0",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "morgan": "^1.10.0",
-    "nanoid": "^5.0.7"
+    "express": "^4.18.2",
+    "mongoose": "^7.6.1"
   }
 }
