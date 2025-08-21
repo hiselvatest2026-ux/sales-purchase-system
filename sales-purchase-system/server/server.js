@@ -1,16 +1,12 @@
 import express from "express";
-import morgan from "morgan";
+import cors from "cors";
+import bodyParser from "body-parser";
+import pkg from "morgan";
+const morgan = pkg;
 
 const app = express();
-
 app.use(morgan("dev"));
-app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("🚀 Sales Purchase System is running with Morgan logging!");
-});
+app.get("/", (req, res) => res.send("Sales Purchase System API is running"));
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`✅ Server running on port ${PORT}`);
-});
+app.listen(5000, () => console.log("Server started on port 5000"));
